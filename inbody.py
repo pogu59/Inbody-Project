@@ -209,7 +209,7 @@ def dite_plan():
 #-------------------------------------------
 #-------------------------------------------
 
-#----------하단 세부 기능 추가----------
+#----------하단 기능 버튼 Frame----------
 bottom_frame = tk.Frame(root, bg=bg_section, relief=tk.RAISED, bd=2, height=50)
 bottom_frame.pack(fill=tk.BOTH, padx=5, pady=5)
 
