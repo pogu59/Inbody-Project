@@ -215,11 +215,12 @@ bottom_frame.pack(fill=tk.BOTH, padx=5, pady=5)
 
 #-------사용자 정보 재입력 기능-------
 def refresh():
-    height_input.delete(0, tk.END)
-    weight_input.delete(0, tk.END)
-    right_title.config(text="결과가 입력됩니다.", font=font_title)
-    result_label.config(text="")
-    bmi_info_label.config(text="")
+    if msgbox.askyesno("다시 입력","사용자 정보를 다시 입력하시겠습니까?"):
+        height_input.delete(0, tk.END)
+        weight_input.delete(0, tk.END)
+        right_title.config(text="결과가 입력됩니다.", font=font_title)
+        result_label.config(text="")
+        bmi_info_label.config(text="")
 
 refresh_button = tk.Button(bottom_frame, font=font_normal, text="다시 입력", command=refresh, bg=color_button_refresh)
 refresh_button.pack(side=tk.LEFT, padx=10, pady=5)
