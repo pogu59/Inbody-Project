@@ -213,6 +213,7 @@ def dite_plan():
 bottom_frame = tk.Frame(root, bg=bg_section, relief=tk.RAISED, bd=2, height=50)
 bottom_frame.pack(fill=tk.BOTH, padx=5, pady=5)
 
+#-------사용자 정보 재입력 기능-------
 def refresh():
     height_input.delete(0, tk.END)
     weight_input.delete(0, tk.END)
@@ -222,13 +223,16 @@ def refresh():
 
 refresh_button = tk.Button(bottom_frame, font=font_normal, text="다시 입력", command=refresh, bg=color_button_refresh)
 refresh_button.pack(side=tk.LEFT, padx=10, pady=5)
+#----------------------------------
 
+#--------프로그램 종료를 위한 확인 기능--------
 def on_exit():
     if msgbox.askyesno("종료", "프로그램을 종료하시겠습니까?"):
         root.destroy()
 
 exit_button = tk.Button(bottom_frame, text="종료", font=font_normal, command=on_exit, bg=color_button_exit, fg="white")
 exit_button.pack(side=tk.RIGHT, padx=10, pady=10)
-#------------------------------------
+#------------------------------------------
+#------------------------------------------
 
 root.mainloop()
